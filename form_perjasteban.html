@@ -52,7 +52,7 @@
       const CHAT_ID = '7845232622'; // Replace with your chat ID
 
       // Prepare the message
-      const textMessage = `Pesanan: ${currentProduct.get('PT JASTEB')}\nPesanan dari: ${formData.get('nama')}\nWA: ${formData.get('wa')}\nCatatan: ${formData.get('catatan') || '-'}`;
+      const textMessage = `Pesanan: ${currentProduct}\nPesanan dari: ${formData.get('nama')}\nWA: ${formData.get('wa')}\nCatatan: ${formData.get('catatan') || '-'}`;
 
       try {
         // Send text message

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pembayaran - ZLANEE STORE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h2>Pembayaran</h2>
+    <p>Silakan transfer ke metode pembayaran di bawah ini:</p>
+    <img src="qris.png" alt="QRIS" style="max-width: 200px; display: block; margin: 10px auto;" />
+    <p>DANA: <b>083106960017</b></p>
+    <p>GoPay: <b>088808369439</b></p>
+    <label for="buktiTransfer">Bukti Transfer:</label>
+    <input type="file" id="buktiTransfer" accept="image/*" required />
+    <button onclick="goToForm()">Lanjutkan</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

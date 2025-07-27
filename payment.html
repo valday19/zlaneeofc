@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pembayaran - ZLANEE STORE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="payment-container">
+    <a href="index.html" class="back-button">← Kembali ke Produk</a>
+    
+    <div class="card">
+      <h2><i class="fas fa-money-bill-wave"></i> Pembayaran</h2>
+      <div class="payment-info">
+        <p>Anda memesan: <strong id="product-display"></strong></p>
+        <p>Silakan transfer ke metode pembayaran di bawah ini:</p>
+        
+        <div class="payment-methods">
+          <div class="payment-method">
+            <h3>QRIS</h3>
+            <img src="qris.png" alt="QRIS" class="payment-qr" />
+          </div>
+          
+          <div class="payment-method">
+            <h3>Transfer Bank/Digital</h3>
+            <p><i class="fas fa-wallet"></i> DANA: <b>083106960017</b></p>
+            <p><i class="fas fa-money-bill-alt"></i> GoPay: <b>088808369439</b></p>
+          </div>
+        </div>
+        
+        <div class="payment-verification">
+          <h3>Verifikasi Pembayaran</h3>
+          <div class="form-group">
+            <label for="namaPembayar">Nama Pembayar:</label>
+            <input type="text" id="namaPembayar" placeholder="Nama sesuai rekening" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="jumlahTransfer">Jumlah Transfer (Rp):</label>
+            <input type="number" id="jumlahTransfer" placeholder="Masukkan jumlah transfer" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="buktiTransfer">Bukti Transfer:</label>
+            <input type="file" id="buktiTransfer" accept="image/*, .pdf" required />
+            <small>Format: JPG, PNG, atau PDF (maks. 2MB)</small>
+          </div>
+          
+          <div class="form-group">
+            <label for="metodePembayaran">Metode Pembayaran:</label>
+            <select id="metodePembayaran" required>
+              <option value="">Pilih metode...</option>
+              <option value="QRIS">QRIS</option>
+              <option value="DANA">DANA</option>
+              <option value="GoPay">GoPay</option>
+              <option value="Bank Transfer">Bank Transfer</option>
+            </select>
+          </div>
+          
+          <button id="verifyButton" onclick="verifyPayment()">Verifikasi Pembayaran</button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="loading" class="loading-overlay hidden">
+      <div class="loading-spinner"></div>
+      <p>Memverifikasi pembayaran...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
